@@ -1,0 +1,139 @@
+[debug] [2023-07-07T13:02:29.347Z] ----------------------------------------------------------------------
+[debug] [2023-07-07T13:02:29.352Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JAPAN COMPUTERS\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2023-07-07T13:02:29.353Z] CLI Version:   12.4.0
+[debug] [2023-07-07T13:02:29.353Z] Platform:      win32
+[debug] [2023-07-07T13:02:29.354Z] Node Version:  v16.15.0
+[debug] [2023-07-07T13:02:29.362Z] Time:          Fri Jul 07 2023 18:02:29 GMT+0500 (Pakistan Standard Time)
+[debug] [2023-07-07T13:02:29.363Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-07T13:02:29.370Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-07-07T13:02:29.612Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-07T13:02:29.613Z] > authorizing via signed-in user (yasanmalikofficial@gmail.com)
+[debug] [2023-07-07T13:02:29.613Z] [iam] checking project phcs-3f387 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2023-07-07T13:02:29.616Z] > refreshing access token with scopes: []
+[debug] [2023-07-07T13:02:29.617Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-07-07T13:02:29.618Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-07T13:02:30.313Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-07-07T13:02:30.314Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-07-07T13:02:30.597Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-07-07T13:02:30.598Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-07-07T13:02:30.618Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/phcs-3f387:testIamPermissions [none]
+[debug] [2023-07-07T13:02:30.618Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/phcs-3f387:testIamPermissions x-goog-quota-user=projects/phcs-3f387
+[debug] [2023-07-07T13:02:30.618Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/phcs-3f387:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-07T13:02:32.690Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/phcs-3f387:testIamPermissions 200
+[debug] [2023-07-07T13:02:32.690Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/phcs-3f387:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2023-07-07T13:02:32.691Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/phcs-3f387/serviceAccounts/phcs-3f387@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-07T13:02:32.691Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/phcs-3f387/serviceAccounts/phcs-3f387@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-07T13:02:34.309Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/phcs-3f387/serviceAccounts/phcs-3f387@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-07T13:02:34.309Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/phcs-3f387/serviceAccounts/phcs-3f387@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'phcs-3f387'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] +  functions: Finished running predeploy script. 
+[debug] [2023-07-07T13:02:40.599Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 [none]
+[debug] [2023-07-07T13:02:41.232Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 200
+[debug] [2023-07-07T13:02:41.232Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 {"projectId":"phcs-3f387","projectNumber":"461629452441","displayName":"PHCS","name":"projects/phcs-3f387","resources":{"hostingSite":"phcs-3f387","storageBucket":"phcs-3f387.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_7ed552c9-d4e9-4155-9e3e-fc542cf913b9"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2023-07-07T13:02:41.240Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudfunctions.googleapis.com [none]
+[debug] [2023-07-07T13:02:41.240Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/phcs-3f387
+[debug] [2023-07-07T13:02:41.243Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/runtimeconfig.googleapis.com [none]
+[debug] [2023-07-07T13:02:41.243Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/phcs-3f387
+[debug] [2023-07-07T13:02:41.246Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudbuild.googleapis.com [none]
+[debug] [2023-07-07T13:02:41.247Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudbuild.googleapis.com x-goog-quota-user=projects/phcs-3f387
+[debug] [2023-07-07T13:02:41.248Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/artifactregistry.googleapis.com [none]
+[debug] [2023-07-07T13:02:41.249Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/artifactregistry.googleapis.com x-goog-quota-user=projects/phcs-3f387
+[debug] [2023-07-07T13:02:43.072Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudfunctions.googleapis.com 200
+[debug] [2023-07-07T13:02:43.072Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2023-07-07T13:02:43.080Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudbuild.googleapis.com 200
+[debug] [2023-07-07T13:02:43.080Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2023-07-07T13:02:43.087Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/artifactregistry.googleapis.com 200
+[debug] [2023-07-07T13:02:43.088Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2023-07-07T13:02:43.111Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/runtimeconfig.googleapis.com 200
+[debug] [2023-07-07T13:02:43.111Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/phcs-3f387/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2023-07-07T13:02:43.112Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387/adminSdkConfig [none]
+[debug] [2023-07-07T13:02:43.758Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387/adminSdkConfig 200
+[debug] [2023-07-07T13:02:43.758Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387/adminSdkConfig {"projectId":"phcs-3f387","storageBucket":"phcs-3f387.appspot.com","locationId":"asia-southeast2"}
+[debug] [2023-07-07T13:02:43.759Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/phcs-3f387/configs [none]
+[debug] [2023-07-07T13:02:45.440Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/phcs-3f387/configs 200
+[debug] [2023-07-07T13:02:45.441Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/phcs-3f387/configs {}
+[debug] [2023-07-07T13:02:45.444Z] Validating nodejs source
+[debug] [2023-07-07T13:02:49.976Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@google-cloud/vision": "^3.1.3",
+    "@tensorflow/tfjs-core": "1.7.0",
+    "@tensorflow/tfjs-node": "^1.7.0",
+    "@vladmandic/face-api": "^1.7.12",
+    "canvas": "^2.11.2",
+    "face-api.js": "^0.22.2",
+    "firebase-admin": "^11.5.0",
+    "firebase-functions": "^4.4.1",
+    "moment-timezone": "^0.5.43",
+    "node-fetch": "^2.6.12"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.0.0"
+  },
+  "private": true
+}
+[debug] [2023-07-07T13:02:49.977Z] Building nodejs source
+[debug] [2023-07-07T13:02:49.979Z] Could not find functions.yaml. Must use http discovery
+[debug] [2023-07-07T13:02:49.995Z] Found firebase-functions binary at 'D:\punjab_health_care_system-v1.0.1\functions\node_modules\.bin\firebase-functions'
+[debug] [2023-07-07T13:02:50.918Z] Serving at port 8814
+
+[debug] [2023-07-07T13:02:53.700Z] Got response from /__/functions.yaml {"endpoints":{"performFacialRecognitionOnCreate":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","eventFilters":{"resource":"projects/phcs-3f387/databases/(default)/documents/Access/{docId}"},"retry":false},"labels":{},"entryPoint":"performFacialRecognitionOnCreate"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2023-07-07T13:02:53.729Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged D:\punjab_health_care_system-v1.0.1\functions (8.19 MB) for uploading 
+[debug] [2023-07-07T13:02:54.779Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/-/functions [none]
+[debug] [2023-07-07T13:02:56.709Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/-/functions 200
+[debug] [2023-07-07T13:02:56.709Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/-/functions {"functions":[{"name":"projects/phcs-3f387/locations/us-central1/functions/dailyDiagnosisCheck","eventTrigger":{"eventType":"google.pubsub.topic.publish","resource":"projects/phcs-3f387/topics/firebase-schedule-dailyDiagnosisCheck-us-central1","service":"pubsub.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"dailyDiagnosisCheck","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"phcs-3f387@appspot.gserviceaccount.com","updateTime":"2023-06-17T06:23:21.892Z","versionId":"7","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"ff6eedde118feef83db782e59ab2be28d92f35b7"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/0acd59cb-235c-4030-855d-89da5469f324.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/dailyDiagnosisCheck"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"59f8edc5-2d01-4596-be0b-dd42f24c4609","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/59f8edc5-2d01-4596-be0b-dd42f24c4609","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/phcs-3f387/locations/us-central1/functions/manageCompletionAndReminders","eventTrigger":{"eventType":"google.pubsub.topic.publish","resource":"projects/phcs-3f387/topics/firebase-schedule-manageCompletionAndReminders-us-central1","service":"pubsub.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"manageCompletionAndReminders","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"phcs-3f387@appspot.gserviceaccount.com","updateTime":"2023-05-11T20:24:44.825Z","versionId":"3","labels":{"deployment-tool":"cli-firebase","deployment-scheduled":"true","firebase-functions-hash":"33f90bde8e5f51704ce406764857e25989a9b548"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/7571d24a-fa18-49fe-a643-c121fa237d6d.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/manageCompletionAndReminders"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"1bb8456f-49e0-4ec9-8a12-c8e1e3febeb2","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/1bb8456f-49e0-4ec9-8a12-c8e1e3febeb2","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/phcs-3f387/locations/us-central1/functions/performFacialRecognitionOnCreate","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","resource":"projects/phcs-3f387/databases/(default)/documents/Access/{docId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"performFacialRecognitionOnCreate","timeout":"60s","availableMemoryMb":4096,"updateTime":"2023-07-06T09:14:55.711Z","versionId":"42","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"ae269ca304305a2a94057546f1385a826679a4b3"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/5ce3e260-70a5-40b0-8918-a614716c0eed.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/performFacialRecognitionOnCreate"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"762c354c-bd42-43bd-9fc0-778fd3037d8e","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/762c354c-bd42-43bd-9fc0-778fd3037d8e","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnAccessed","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","resource":"projects/phcs-3f387/databases/(default)/documents/Access/{AccessId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"sendNotificationOnAccessed","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"phcs-3f387@appspot.gserviceaccount.com","updateTime":"2023-05-11T19:30:41.789Z","versionId":"12","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"8cf338f7cf1bd80fc1218b92f9c7e2be0dc198c8"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/51b72647-5bd5-4baf-97d5-557aebeaeb49.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnAccessed"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"60958457-1b78-4139-9c36-4774cb86ad40","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/60958457-1b78-4139-9c36-4774cb86ad40","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnBookingCreate","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.create","resource":"projects/phcs-3f387/databases/(default)/documents/Bookings/{bookingId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"sendNotificationOnBookingCreate","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"phcs-3f387@appspot.gserviceaccount.com","updateTime":"2023-05-11T20:20:23.561Z","versionId":"5","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"c6230bfab5deee1be5b27d8750b1eb891d29ad36"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/100b682f-78af-4df9-9c75-e2ecaef1c572.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnBookingCreate"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"ace2b508-704d-4340-b7b2-31228de30883","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/ace2b508-704d-4340-b7b2-31228de30883","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnStatusChange","eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/phcs-3f387/databases/(default)/documents/Bookings/{docId}","service":"firestore.googleapis.com","failurePolicy":{}},"status":"ACTIVE","entryPoint":"sendNotificationOnStatusChange","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"phcs-3f387@appspot.gserviceaccount.com","updateTime":"2023-05-11T20:32:20.285Z","versionId":"8","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"d735df7a87a6dfb56c161b79d3cf209c9b94cba7"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/5d44d7b4-fa10-456a-ba0d-ccf25bdac5f7.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"phcs-3f387\",\"storageBucket\":\"phcs-3f387.appspot.com\",\"locationId\":\"asia-southeast2\"}","GCLOUD_PROJECT":"phcs-3f387","EVENTARC_CLOUD_EVENT_SOURCE":"projects/phcs-3f387/locations/us-central1/functions/sendNotificationOnStatusChange"},"runtime":"nodejs16","maxInstances":3000,"ingressSettings":"ALLOW_ALL","buildId":"3b8a7b24-181a-494b-9595-9409b931a6fa","buildEnvironmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"buildName":"projects/461629452441/locations/us-central1/builds/3b8a7b24-181a-494b-9595-9409b931a6fa","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2023-07-07T13:02:56.711Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/phcs-3f387/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2023-07-07T13:02:58.196Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/phcs-3f387/locations/-/functions 200
+[debug] [2023-07-07T13:02:58.196Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/phcs-3f387/locations/-/functions {}
+[debug] [2023-07-07T13:02:58.207Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 [none]
+[debug] [2023-07-07T13:02:58.834Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 200
+[debug] [2023-07-07T13:02:58.835Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/phcs-3f387 {"projectId":"phcs-3f387","projectNumber":"461629452441","displayName":"PHCS","name":"projects/phcs-3f387","resources":{"hostingSite":"phcs-3f387","storageBucket":"phcs-3f387.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_7ed552c9-d4e9-4155-9e3e-fc542cf913b9"}
+[debug] [2023-07-07T13:02:58.837Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2023-07-07T13:02:58.837Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2023-07-07T13:02:59.674Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2023-07-07T13:02:59.674Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/phcs-3f387/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/85b2ed0e-1460-4256-87a9-7013739b25ec.zip?GoogleAccessId=service-461629452441@gcf-admin-robot.iam.gserviceaccount.com&Expires=1688736782&Signature=TjXg6D9JuePONnZ6lLwSR%2Bjy93FFyXbrgX1zaOsV%2FZP%2F61bssLNj3Wzecf2b2O%2Bj%2Bdgy0IwGzhMxmxb0RHrcMWCbttayoca3R%2Bd9LH%2BpjyS7EQz1xCER5ri%2BnlKLMve66kQLS1mOi5i6RxY4hLHE0OXRpWG8VULm5BGVAp6KgrP%2F3tgvBtpkYru1O1h65l6YAQApHC%2B%2BFkJeeuJ%2F2QVg5XTDUg3CMqJpyPV5rkZ%2BwOkEf1R1tX8qG9mpoo5kgNenURltU%2Fddx5eskGiX%2BFR1vqto%2B3oyPDfz8oLhqrzyoHPRqqJTHKBM78x830NdcCmBoHcnnOPoh2ou%2BFWbzUXsGw%3D%3D"}
+[debug] [2023-07-07T13:02:59.675Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/85b2ed0e-1460-4256-87a9-7013739b25ec.zip GoogleAccessId=service-461629452441%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1688736782&Signature=TjXg6D9JuePONnZ6lLwSR%2Bjy93FFyXbrgX1zaOsV%2FZP%2F61bssLNj3Wzecf2b2O%2Bj%2Bdgy0IwGzhMxmxb0RHrcMWCbttayoca3R%2Bd9LH%2BpjyS7EQz1xCER5ri%2BnlKLMve66kQLS1mOi5i6RxY4hLHE0OXRpWG8VULm5BGVAp6KgrP%2F3tgvBtpkYru1O1h65l6YAQApHC%2B%2BFkJeeuJ%2F2QVg5XTDUg3CMqJpyPV5rkZ%2BwOkEf1R1tX8qG9mpoo5kgNenURltU%2Fddx5eskGiX%2BFR1vqto%2B3oyPDfz8oLhqrzyoHPRqqJTHKBM78x830NdcCmBoHcnnOPoh2ou%2BFWbzUXsGw%3D%3D
+[debug] [2023-07-07T13:02:59.676Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/85b2ed0e-1460-4256-87a9-7013739b25ec.zip [stream]
+[debug] [2023-07-07T13:03:23.842Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/85b2ed0e-1460-4256-87a9-7013739b25ec.zip 200
+[debug] [2023-07-07T13:03:23.843Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-45095809720.us-central1.cloudfunctions.appspot.com/85b2ed0e-1460-4256-87a9-7013739b25ec.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] 
+The following functions are found in your project but do not exist in your local source code:
+	dailyDiagnosisCheck(us-central1)
+	manageCompletionAndReminders(us-central1)
+	sendNotificationOnAccessed(us-central1)
+	sendNotificationOnBookingCreate(us-central1)
+	sendNotificationOnStatusChange(us-central1)
+
+If you are renaming a function or changing its region, it is recommended that you create the new function first before deleting the old one to prevent event loss. For more info, visit https://firebase.google.com/docs/functions/manage-functions#modify
+
